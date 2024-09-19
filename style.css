@@ -29,6 +29,12 @@ header {
     top: 0;
     left: 0;
     z-index: -1;
+    height: 200px; /* Adjust this height according to your needs */
+}
+
+nav {
+    position: relative;
+    z-index: 1;
 }
 
 nav ul {
@@ -36,6 +42,8 @@ nav ul {
     justify-content: center;
     list-style: none;
     padding: 0;
+    background: rgba(0, 0, 0, 0.7); /* Background for nav links */
+    margin: 0;
 }
 
 nav ul li {
@@ -43,14 +51,22 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #8d0f0f;
+    color: #fff;
     text-decoration: none;
     font-size: 18px;
+    padding: 15px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background: #444;
 }
 
 .hero {
     padding: 80px 20px 40px;
     background: rgba(214, 188, 211, 0.877);
+    position: relative;
+    z-index: 1;
 }
 
 .profile-image {
@@ -71,13 +87,65 @@ h1, h2, h3 {
     color: #fff;
 }
 
-.section {
+.main {
     padding: 20px 0;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
+}
+
+/* Highlight Sections */
+.section {
+    padding: 40px 20px;
+    margin: 0 auto;
+    border-radius: 8px;
+    color: #333;
+}
+
+.home-section {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.home-section h2 {
+    font-size: 2.5em;
+    color: #333;
+}
+
+.home-section p {
+    font-size: 1.2em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Different Background Colors for Sections */
+.about-section {
+    background-color: #e0f7fa; /* Light cyan */
+}
+
+.skills-section {
+    background-color: #e8f5e9; /* Light green */
+}
+
+.projects-section {
+    background-color: #fffde7; /* Light yellow */
+}
+
+.contact-section {
+    background-color: #fbe9e7; /* Light pink */
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.section p {
+    text-align: center;
+    color: #666;
 }
 
 .grid-container {
@@ -88,11 +156,17 @@ h1, h2, h3 {
 
 .grid-item {
     flex: 1;
-    min-width: 200px;
+    min-width: 300px; /* Adjust the minimum width as needed */
     background: #fff;
-    padding: 15px;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-item:hover {
+    background: #f5f5f5;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 .project-item img {
@@ -115,7 +189,7 @@ form input, form textarea {
 
 form button {
     background: #333;
-    color: #423636;
+    color: #fff;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
